@@ -621,10 +621,6 @@
 	status = HDMI_STATUS;
 };
 
-&hdmi_cec {
-	status = HDMI_STATUS;
-};
-
 &i2c1 {
 	clock-frequency = <400000>;
 	pinctrl-names = "default";
