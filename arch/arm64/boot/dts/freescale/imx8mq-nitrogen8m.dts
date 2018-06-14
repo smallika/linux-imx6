@@ -149,8 +149,6 @@
 			MX8MQ_IOMUXC_SAI5_RXD1_GPIO3_IO22		0xd6
 			/* J13 Pin 42, BT_HOST_WAKE */
 			MX8MQ_IOMUXC_SAI5_MCLK_GPIO3_IO25		0xd6
-			/* Causes a POR_B */
-			MX8MQ_IOMUXC_GPIO1_IO02_GPIO1_IO2		0x19
 
 			/* Clock for both CSI1 and CSI2 */
 			MX8MQ_IOMUXC_GPIO1_IO15_CCMSRCGPCMIX_CLKO2	0x59
@@ -482,6 +480,12 @@
 			MX8MQ_IOMUXC_SD2_DATA1_USDHC2_DATA1		0xc7
 			MX8MQ_IOMUXC_SD2_DATA2_USDHC2_DATA2		0xc7
 			MX8MQ_IOMUXC_SD2_DATA3_USDHC2_DATA3		0xc7
+		>;
+	};
+
+	pinctrl_wdog: wdoggrp {
+		fsl,pins = <
+			MX8MQ_IOMUXC_GPIO1_IO02_WDOG1_WDOG_B	0xc6
 		>;
 	};
 };
@@ -1245,5 +1249,8 @@
 };
 
 &wdog1 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&pinctrl_wdog>;
+	fsl,ext-reset-output;
 	status = "okay";
 };
