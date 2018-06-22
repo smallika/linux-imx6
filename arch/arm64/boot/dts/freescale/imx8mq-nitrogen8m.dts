@@ -1152,7 +1152,6 @@
 };
 
 &uart1 { /* console */
-	dma-names = "","";
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_uart1>;
 	assigned-clocks = <&clk IMX8MQ_CLK_UART1_SRC>;
@@ -1161,7 +1160,6 @@
 };
 
 &uart2 {
-	dma-names = "","";
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_uart2>;
 	assigned-clocks = <&clk IMX8MQ_CLK_UART2_SRC>;
@@ -1170,7 +1168,6 @@
 };
 
 &uart3 {
-	dma-names = "","";
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_uart3>;
 	assigned-clocks = <&clk IMX8MQ_CLK_UART3_SRC>;
@@ -1180,7 +1177,6 @@
 };
 
 &uart4 {
-	dma-names = "","";
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_uart4>;
 	assigned-clocks = <&clk IMX8MQ_CLK_UART4_SRC>;
